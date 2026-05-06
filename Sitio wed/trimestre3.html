@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Trimestre 3 - Mundo Paint</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="game-wrapper">
+        <header class="top-bar">
+            <h1 class="main-logo">Nivel 3: <span>Mundo Paint</span></h1>
+            <a href="index.html" class="btn-play" style="background: #e74c3c; box-shadow: 0 6px 0 #c0392b;">Volver</a>
+        </header>
+
+        <main class="card" style="max-width: 600px; margin: 0 auto;">
+            <h3>¡Practica con los colores!</h3>
+            <div id="lienzo" style="width:100%; height:150px; background:#eee; border-radius:20px; margin:20px 0; border:4px dashed #ccc;">
+                </div>
+            
+            <div style="display: flex; justify-content: space-around;">
+                <button class="btn-play" style="background:red; box-shadow:0 4px 0 #a00;" onclick="cambiarColor('red')">Rojo</button>
+                <button class="btn-play" style="background:blue; box-shadow:0 4px 0 #00a;" onclick="cambiarColor('blue')">Azul</button>
+                <button class="btn-play" style="background:green; box-shadow:0 4px 0 #0a0;" onclick="cambiarColor('green')">Verde</button>
+                <button class="btn-play" style="background:yellow; color:black; box-shadow:0 4px 0 #aa0;" onclick="cambiarColor('yellow')">Amarillo</button>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        function cambiarColor(nuevoColor) {
+            document.getElementById('lienzo').style.backgroundColor = nuevoColor;
+            document.getElementById('lienzo').style.border = "4px solid white";
+        }
+    </script>
+</body>
+</html>

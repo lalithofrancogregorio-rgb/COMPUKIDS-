@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Trimestre 1 - Conociendo la PC</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="game-wrapper">
+        <header class="top-bar">
+            <h1 class="main-logo">Nivel 1: <span>La Computadora</span></h1>
+            <a href="index.html" class="btn-play" style="background: #e74c3c; box-shadow: 0 6px 0 #c0392b;">Volver</a>
+        </header>
+
+        <main class="card" style="max-width: 800px; margin: 0 auto;">
+            <div class="card-icon">🖥️</div>
+            <div class="speech-bubble" id="info-box">¡Haz clic en una parte para aprender!</div>
+            
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 20px;">
+                <button class="btn-play" onclick="mostrarInfo('Monitor', 'Es la pantalla donde puedes ver tus dibujos y videos.')">📺 Monitor</button>
+                <button class="btn-play" onclick="mostrarInfo('CPU', 'Es el cerebro de la computadora, ¡donde todo sucede!')">⚙️ CPU</button>
+                <button class="btn-play" onclick="mostrarInfo('Mouse', 'Sirve para mover la flechita y elegir cosas.')">🖱️ Mouse</button>
+                <button class="btn-play" onclick="mostrarInfo('Teclado', 'Tiene letras y números para que puedas escribir.')">⌨️ Teclado</button>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        function mostrarInfo(titulo, descripcion) {
+            const box = document.getElementById('info-box');
+            box.innerHTML = `<strong>${titulo}:</strong> ${descripcion}`;
+            box.style.background = "#e0f2ff";
+        }
+    </script>
+</body>
+</html>

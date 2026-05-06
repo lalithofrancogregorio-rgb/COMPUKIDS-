@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Trimestre 2 - Windows 10</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="game-wrapper">
+        <header class="top-bar">
+            <h1 class="main-logo">Nivel 2: <span>Windows</span></h1>
+            <a href="index.html" class="btn-play" style="background: #e74c3c; box-shadow: 0 6px 0 #c0392b;">Volver</a>
+        </header>
+
+        <main class="card" style="max-width: 600px; margin: 0 auto; text-align: left;">
+            <h3>¿Qué has aprendido hoy?</h3>
+            <p>Marca tus logros:</p>
+            <br>
+            <label><input type="checkbox" onclick="verificarProgreso()"> Usar el Puntero</label><br><br>
+            <label><input type="checkbox" onclick="verificarProgreso()"> Abrir el Botón de Inicio</label><br><br>
+            <label><input type="checkbox" onclick="verificarProgreso()"> Reconocer Iconos</label><br><br>
+            
+            <div id="mensaje-victoria" style="display:none; margin-top:20px; color:#2ecc71; font-weight:bold;">
+                ¡Excelente Eduardo! Estás dominando Windows. 🌟
+            </div>
+        </main>
+    </div>
+
+    <script>
+        function verificarProgreso() {
+            const checks = document.querySelectorAll('input[type="checkbox"]:checked');
+            if(checks.length === 3) {
+                document.getElementById('mensaje-victoria').style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>
